@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: iidkhebb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 02:38:52 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/13 21:52:20 by majjig           ###   ########.fr       */
+/*   Created: 2021/11/13 23:41:01 by iidkhebb          #+#    #+#             */
+/*   Updated: 2021/11/13 23:41:02 by iidkhebb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
