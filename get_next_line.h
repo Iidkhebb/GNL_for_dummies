@@ -20,7 +20,6 @@
 # include <fcntl.h>
 # include <stdio.h>
 # include <string.h>
-
 /* PROTOTYPES */
 char	*get_next_line(int fd);
 char	*ft_add_char(char *big, char *c);

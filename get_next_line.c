@@ -15,28 +15,28 @@
 
 char	*get_next_line(int fd)
 {
-	char			reading_return[1];
-	static char		*str_static;
-	int				reading_status;
+	char			r[1];
+	static char		*str;
+	int				status;
 
 	if (fd < 0 || fd > 256 || BUFFER_SIZE <= 0)
 		return (0);
-	str_static = (char *)malloc(2 * sizeof(char));
-	reading_status = read(fd, reading_return, 1);
-	if (!str_static || reading_status < 0)
-		return (free(str_static), NULL);
-	str_static[0] = *reading_return;
-	str_static[1] = '\0';
-	while (reading_status && str_static)
+	str = (char *)malloc(2 * sizeof(char));
+	status = read(fd, r, 1);
+	if (!str || status < 0)
+		return (free(str), NULL);
+	str[0] = *r;
+	str[1] = '\0';
+	while (status && str)
 	{
-		if (*reading_return == '\n')
-			return (str_static);
-		reading_status = read(fd, reading_return, 1);
-		if (reading_status == 0)
-			return (str_static);
-		str_static = ft_add_char(str_static, reading_return);
+		if (*r == '\n')
+			return (str);
+		status = read(fd, r, 1);
+		if (status == 0)
+			return (str);
+		str = ft_add_char(str, r);
 	}
-	return (free(str_static), NULL);
+	return (free(str), NULL);
 }
 /*
 int main()
